@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Trading Dashboard</title>
+<style>
+body {background:#0f172a;color:white;font-family:Arial;text-align:center;}
+.card {background:#1e293b;padding:20px;margin:20px;border-radius:10px;}
+.buy {color:lime;}
+.sell {color:red;}
+</style>
+</head>
+<body>
+<h1>Intraday Trading Dashboard</h1>
+
+<div class="card">
+<h2>Signal: 
+<span class="{% if signal=='BUY' %}buy{% elif signal=='SELL' %}sell{% endif %}">
+{{ signal }}
+</span>
+</h2>
+<p>Entry: {{ entry }}</p>
+<p>Stop Loss: {{ sl }}</p>
+<p>Target: {{ target }}</p>
+<p>RR Ratio: {{ rr }}</p>
+</div>
+
+</body>
+</html>
